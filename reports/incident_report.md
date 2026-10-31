@@ -22,3 +22,7 @@ To ensure reliable analytical findings, raw event data was standardized:
 ## 5. Evidence vs. Assumptions
 - **Confirmed Evidence:** Exact timestamps, source IP strings, target usernames, and recorded failure/success outcomes drawn straight from log rows.
 - **Analyst Assumptions:** High request velocity indicates automated scripting tools rather than manual user entry.
+
+## 6. Recommendations & Remediation
+- **Containment:** Temporarily block or rate-limit source IPs identified executing password-spraying and brute-force patterns. Force password resets for any targeted accounts that experienced successful or suspicious access.
+- **Logging Controls:** Enable Multi-Factor Authentication (MFA) across all endpoints, implement account lockout policies after 5 consecutive failures, and centralize logs into a SIEM tool with real-time alerting for high-velocity account enumeration.
